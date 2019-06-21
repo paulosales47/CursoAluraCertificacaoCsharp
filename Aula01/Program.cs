@@ -12,7 +12,9 @@ namespace Aula01
 
             //Ref();
 
-            TesteIn();
+            //TesteIn();
+
+            ArgumentosNomeados();
 
             Console.ReadKey();
         }
@@ -58,6 +60,18 @@ namespace Aula01
         {
             //arg1 = 500; //Erro, pois não permite alterar o valor de um parametro com o modificador in
             return arg1 + arg2;
+        }
+
+        public static void ArgumentosNomeados()
+        {
+            ImprimirDetalhesPedido(nomeCliente: "Paulo", NomeVendedor: "Sampaio", numeroPedido: 1);
+            ImprimirDetalhesPedido(nomeCliente: "Paulo", "Sampaio", 2);
+            ImprimirDetalhesPedido("Paulo", NomeVendedor: "Sampaio", 3);
+        }
+
+        public static void ImprimirDetalhesPedido(string nomeCliente, string NomeVendedor, int numeroPedido)
+        {
+            Console.WriteLine($"{nomeCliente} - {NomeVendedor} - {numeroPedido}");
         }
 
         public static void Barra()
