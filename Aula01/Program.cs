@@ -8,7 +8,11 @@ namespace Aula01
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Ref();
+            //Out();
+
+            //Ref();
+
+            TesteIn();
 
             Console.ReadKey();
         }
@@ -45,7 +49,16 @@ namespace Aula01
             throw new IndexOutOfRangeException("Valor não encontrado no array");
         }
 
+        public static void TesteIn()
+        {
+            Console.WriteLine(SomarDoisNumeros(500, 100));
+        }
 
+        public static double SomarDoisNumeros(in double arg1, in double arg2)
+        {
+            //arg1 = 500; //Erro, pois não permite alterar o valor de um parametro com o modificador in
+            return arg1 + arg2;
+        }
 
         public static void Barra()
         {
