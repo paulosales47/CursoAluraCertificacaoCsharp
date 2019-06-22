@@ -8,7 +8,9 @@ namespace Aula02
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Tupla();
+            //Tupla();
+
+            Descartes();
 
             Console.ReadKey();
         }
@@ -33,6 +35,15 @@ namespace Aula02
         {
             return (1, "Paulo", 15.95);
         }
+
+        public static void Descartes()
+        {
+            Barra();
+            var (numeroPedido, _, valorPedido) = RetornarPedidosNovo();
+            Console.WriteLine($"{numeroPedido} - {valorPedido}");
+            Barra();
+        }
+
 
         public static void Barra()
         {
