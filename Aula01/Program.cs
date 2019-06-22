@@ -67,6 +67,7 @@ namespace Aula01
             ImprimirDetalhesPedido(nomeCliente: "Paulo", NomeVendedor: "Sampaio", numeroPedido: 1);
             ImprimirDetalhesPedido(nomeCliente: "Paulo", "Sampaio", 2);
             ImprimirDetalhesPedido("Paulo", NomeVendedor: "Sampaio", 3);
+            ImprimirDetalhesPedido(NomeVendedor: "Sampaio", nomeCliente: "Paulo", numeroPedido: 4);
         }
 
         public static void ImprimirDetalhesPedido(string nomeCliente, string NomeVendedor, int numeroPedido)
