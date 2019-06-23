@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Aula04
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            LiteraisNumericos();
-            LiteraisNumericos2();
+            //LiteraisNumericos();
+            //LiteraisNumericos2();
 
+            string html = await BuscarHtmlGoogle();
+            Console.WriteLine(html);
+
+            Console.ReadKey();
         }
 
         public static void LiteraisNumericos()
@@ -32,6 +38,11 @@ namespace Aula04
 
             Console.WriteLine(AVOGRADO);
             Console.WriteLine(AVOGRADO_NEW);
+        }
+
+        public static async Task<string> BuscarHtmlGoogle()
+        {
+            return await new HttpClient().GetStringAsync("https://www.google.com/");
         }
     }
 }
