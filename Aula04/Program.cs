@@ -12,8 +12,10 @@ namespace Aula04
             //LiteraisNumericos();
             //LiteraisNumericos2();
 
-            string html = await BuscarHtmlGoogle();
-            Console.WriteLine(html);
+            //string html = await BuscarHtmlGoogle();
+            //Console.WriteLine(html);
+
+            ValoresPadrao();
 
             Console.ReadKey();
         }
@@ -43,6 +45,17 @@ namespace Aula04
         public static async Task<string> BuscarHtmlGoogle()
         {
             return await new HttpClient().GetStringAsync("https://www.google.com/");
+        }
+
+        public static void ValoresPadrao()
+        {
+            //bool arg1 = default(bool); //Forma antiga
+            bool arg1 = default;
+            string arg2 = default;
+            int arg3 = default;
+
+            Console.WriteLine($"arg1: {arg1}, arg2: {arg2}, arg3: {arg3}");
+
         }
     }
 }
