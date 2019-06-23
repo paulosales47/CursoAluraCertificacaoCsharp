@@ -37,6 +37,14 @@ namespace Aula05
             set => _nome = value.Trim().ToUpper();
         }
 
+        private int _idade;
+
+        public int Idade
+        {
+            get => _idade;
+            set => _idade = value;
+        }
+
         ~Program() => Console.WriteLine("Finalizando a classe");
     }
 }
