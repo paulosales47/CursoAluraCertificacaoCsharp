@@ -69,6 +69,18 @@ namespace Aula03
             Console.WriteLine("============================================================================");
         }
 
+        public static void ExpressoesThrow()
+        {
+            string nome = null;
+            string nome2 = string.Empty;
+
+            //if (string.IsNullOrEmpty(nome))
+            //    throw new ArgumentNullException(nameof(nome), "Nome vazio");
+            //else
+            //    nome2 = nome;
+
+            nome2 = nome ?? throw new ArgumentNullException(nameof(nome), "Nome vazio");
+        }
 
     }
 
